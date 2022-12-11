@@ -1,18 +1,27 @@
 class RunArray:
     #[start,end,font]
     def __init__(self):
-        self.runArray = []  
+        self.runArray = [] 
 
-    #adding the font run with the start and end value in the runarray
+    '''
+    desc: Adding the font run with the start and end value in the runarray
+    input: Start, End, and the Font value
+    '''
     def addRun(self,start,end,font):
         fontlist = [font]*(end-start)
         self.runArray[start:(end)] = fontlist
-    
-    #appending the font run at the end of the runarray
+
+    '''
+    desc: function for appending the font run with the end value in the runarray
+    input: End and the Font value
+    '''
     def appendRun(self,end,font):
         fontlist = [font]*(end - len(self.runArray))
         self.runArray.extend(fontlist)
 
+    '''
+    desc: Function for printing the runArray
+    '''
     def runArrayPrint(self):
         print(self.runArray)
 
