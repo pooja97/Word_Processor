@@ -1,4 +1,4 @@
-from char_flyweight import Flyweight
+from char_flyweight import CharFlyweight
 from character import Character
 
 #Singleton implementation
@@ -13,7 +13,7 @@ class CharFactory:
 
     def getFlyweight(self,unicode):
         unicodeChar = Character.getCharacter(unicode)
-        flyweightObj = Flyweight(unicodeChar)
+        flyweightObj = CharFlyweight(unicodeChar)
         return flyweightObj
     
     

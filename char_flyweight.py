@@ -1,4 +1,4 @@
-class Flyweight:
+class CharFlyweight:
     def __init__(self,char):
         self.char = char
         

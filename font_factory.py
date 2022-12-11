@@ -1,4 +1,5 @@
 #Font Flyweight Factory
+from font import Font
 class FontFactory:
 
     #Singleton implementation
@@ -10,10 +11,9 @@ class FontFactory:
         return cls.__instance
 
 
-    def __init__(self,name,size,style):
-        self.name = name
-        self.size = size
-        self.style = style
+    def getFontObj(self):
+        pass
+
 
 
     
