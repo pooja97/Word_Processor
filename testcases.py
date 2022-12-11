@@ -1,6 +1,7 @@
 from character import Character
 from char_factory import CharFactory
 from font_factory import FontFactory
+from runarray import RunArray
 
 if __name__ == "__main__":
     charObj = Character()
@@ -33,3 +34,12 @@ if __name__ == "__main__":
 
     # print(font1)
     # print(font2)
+
+    test = RunArray()
+    test.addRun(0,2,'A')
+    test.appendRun(10,'B')
+    test.addRun(3,6,'C')
+    test.runArrayPrint()
+    test.appendRun(15,'D')
+    test.runArrayPrint()
+
