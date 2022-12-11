@@ -3,6 +3,7 @@ from char_factory import CharFactory
 from font_factory import FontFactory
 from runarray import RunArray
 
+
 if __name__ == "__main__":
     charObj = Character()
     charObj.charUnicode('A')
@@ -25,15 +26,10 @@ if __name__ == "__main__":
 
     charfactoryobject = CharFactory()
 
-    # print(CharFactoryObject)
-    # print(charfactoryobject)
+    font1 = FontFactory()
 
-    font1 = FontFactory('T',12,'I')
+    font2 = FontFactory()
 
-    font2 = FontFactory('T',14,'B')
-
-    # print(font1)
-    # print(font2)
 
     test = RunArray()
     test.addRun(0,2,'A')
@@ -42,4 +38,8 @@ if __name__ == "__main__":
     test.runArrayPrint()
     test.appendRun(15,'D')
     test.runArrayPrint()
+
+    print(font1.getFontObj('Times',11,'Italic'))
+    print(font2.getFontObj('Times',12,'Bold'))
+
 

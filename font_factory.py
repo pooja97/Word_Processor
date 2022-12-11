@@ -11,8 +11,10 @@ class FontFactory:
         return cls.__instance
 
 
-    def getFontObj(self):
-        pass
+    def getFontObj(self,name,size,type):
+        font = Font(size,name,type)
+        return font
+        
 
 
 
