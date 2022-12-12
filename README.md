@@ -1,6 +1,6 @@
 # Flyweight pattern for Word processor in python3
 
-created a Character class that stores only the unicode code point of the character. 
+Created a Character class that stores only the unicode code point of the character. 
 A Flyweight factory that given a unicode code point returns the Flyweight character object for the character. 
 A single point of access to the same Flyweight factory from anywhere in the program. (Singleton pattern)
 
