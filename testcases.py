@@ -2,7 +2,7 @@ from character import Character
 from char_factory import CharFactory
 from font_factory import FontFactory
 from runarray import RunArray
-
+from sizeCheck import sizeCheck
 
 if __name__ == "__main__":
     charObj = Character()
@@ -21,14 +21,12 @@ if __name__ == "__main__":
     #charfactory 
     CharFactoryObject = CharFactory()
     CharFlyweightObject = CharFactoryObject.getFlyweight(34)
-    # print(CharFlyweightObject)
-
 
     charfactoryobject = CharFactory()
 
     font1 = FontFactory()
 
-    font2 = FontFactory()
+    # font2 = FontFactory()
 
 
     test = RunArray()
@@ -40,5 +38,14 @@ if __name__ == "__main__":
 
     # print(font1.getFontObj('Times',11,'Italic'))
     # print(font2.getFontObj('Times',12,'Bold'))
+
+    #Object size using Flyweight pattern
+    print("Object size using Flyweight pattern is: ", sizeCheck.getSize(CharFactoryObject,CharFlyweightObject,font1,test))
+
+
+    print("Object size without using Flyweight",sizeCheck.Checksize('A'))
+
+    
+
 
 
