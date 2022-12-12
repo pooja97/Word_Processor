@@ -5,6 +5,10 @@ from runarray import RunArray
 from sizeCheck import sizeCheck
 
 if __name__ == "__main__":
+
+    '''
+    Character class object which takes character as a input and store it's unicode
+    '''
     charObj = Character()
     charObj.charUnicode('A')
     charObj.charUnicode('a')
@@ -12,38 +16,56 @@ if __name__ == "__main__":
     charObj.charUnicode('C')
     charObj.charUnicode('!')
 
-    print(charObj.cha())
+    print(charObj.charDict())
 
-    # print(Character.getCharacter(65))
-    # print(Character.getCharacter(99))
-
-
-    #charfactory 
-    CharFactoryObject = CharFactory()
-    CharFlyweightObject = CharFactoryObject.getFlyweight(34)
-
-    charfactoryobject = CharFactory()
-
-    font1 = FontFactory()
-
-    # font2 = FontFactory()
+    '''
+    prints the character given a unicode
+    '''
+    print("Character with Unicode 65 is: ",Character.getCharacter(65))
+    print("Character with Unicode 99 is: ",Character.getCharacter(99))
 
 
-    test = RunArray()
-    test.addRun(0,2,font1.getFontObj('Ariel',10,'Bold'))
-    test.appendRun(10,font1.getFontObj('Times New Roman',10,'Bold'))
-    test.addRun(3,6,font1.getFontObj('Verdana',15,'Italic'))
-    test.appendRun(15,font1.getFontObj('Calibri',8,'Underline'))
-    # test.runArrayPrint()
-
-    # print(font1.getFontObj('Times',11,'Italic'))
-    # print(font2.getFontObj('Times',12,'Bold'))
-
-    #Object size using Flyweight pattern
-    print("Object size using Flyweight pattern is: ", sizeCheck.getSize(CharFactoryObject,CharFlyweightObject,font1,test))
+    '''
+    Character factory object which returns the character flyweight object given the unicode of the character
+    '''
+    charFactoryObject = CharFactory()
+    charFlyweightObject = charFactoryObject.getFlyweight(34)
 
 
-    print("Object size without using Flyweight",sizeCheck.Checksize('A'))
+    '''
+    Font factory object which returns the Font class object given Font name,size and type
+    '''
+    fontFactory = FontFactory()
+    Fontfactory = FontFactory()
+
+    '''
+    Checking the Font factory object. As it has a single point of access, both the object should be same 
+    '''
+    print("Font Factory object: ",fontFactory)
+    print("Font Factory object: ",Fontfactory)
+
+
+
+    '''
+    RunArray class object which stores the run of the Font in the document. Stores the Font class object given its start and end position
+    '''
+    runArray = RunArray()
+    runArray.addRun(0,2,fontFactory.getFontObj('Ariel',10,'Bold'))
+    runArray.appendRun(10,fontFactory.getFontObj('Times New Roman',10,'Bold'))
+    runArray.addRun(3,6,fontFactory.getFontObj('Verdana',15,'Italic'))
+    runArray.appendRun(15,fontFactory.getFontObj('Calibri',8,'Underline'))
+   
+
+    '''
+    Prints the object size with Flyweight pattern
+    '''
+    print("Object size using Flyweight: ", sizeCheck.getSize(charFactoryObject,charFlyweightObject,fontFactory,runArray))
+
+
+    '''
+    Prints the object size without flyweight pattern
+    '''
+    print("Object size without using Flyweight: ",sizeCheck.Checksize('A'))
 
     
 

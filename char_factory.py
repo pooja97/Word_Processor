@@ -1,4 +1,4 @@
-from char_flyweight import CharFlyweight
+from char import CharFlyweight
 from character import Character
 
 #Singleton implementation of a Character factory for Flyweight pattern implementation
@@ -15,7 +15,7 @@ class CharFactory:
         return cls.__instance
 
     '''
-    desc: Function for returning the flyweight class object for the character fetched based on the unicode
+    desc: Function for returning the character flyweight class object for the character fetched based on the unicode
     input: Character Unicode
     output: Character Flyweight object
     '''

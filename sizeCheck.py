@@ -1,6 +1,6 @@
 import sys
 from unsharedcharacter import UnsharedCharacter
-from char_flyweight import CharFlyweight
+from char import CharFlyweight
 from font import Font
 
 
@@ -22,7 +22,7 @@ class sizeCheck:
 
     '''
     desc: function for checking the object size without using Flyweight Pattern
-    Output: Returns the average Object size without using Flyweight Pattern
+    Output: Returns the Object size without using Flyweight Pattern
     '''
 
     def Checksize(ch):

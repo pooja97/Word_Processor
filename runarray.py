@@ -2,6 +2,9 @@
 class RunArray:
     #[start,end,font]
     def __init__(self):
+        '''
+        desc: runArray for storing document font's start, end and font data
+        '''
         self.runArray = [] 
 
     '''

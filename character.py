@@ -25,6 +25,6 @@ class Character:
     desc: Function for returning the character dictionary with its unicode and the character
     input: Character dictionary
     '''
-    def cha(self):
+    def charDict(self):
         return self.char_dict
     
