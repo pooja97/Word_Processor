@@ -32,14 +32,13 @@ if __name__ == "__main__":
 
 
     test = RunArray()
-    test.addRun(0,2,'A')
-    test.appendRun(10,'B')
-    test.addRun(3,6,'C')
-    test.runArrayPrint()
-    test.appendRun(15,'D')
-    test.runArrayPrint()
+    test.addRun(0,2,font1.getFontObj('Ariel',10,'Bold'))
+    test.appendRun(10,font1.getFontObj('Times New Roman',10,'Bold'))
+    test.addRun(3,6,font1.getFontObj('Verdana',15,'Italic'))
+    test.appendRun(15,font1.getFontObj('Calibri',8,'Underline'))
+    # test.runArrayPrint()
 
-    print(font1.getFontObj('Times',11,'Italic'))
-    print(font2.getFontObj('Times',12,'Bold'))
+    # print(font1.getFontObj('Times',11,'Italic'))
+    # print(font2.getFontObj('Times',12,'Bold'))
 
 
