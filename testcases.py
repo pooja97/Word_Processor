@@ -2,7 +2,7 @@ from character import Character
 from char_factory import CharFactory
 from font_factory import FontFactory
 from runarray import RunArray
-from sizeCheck import sizeCheck
+from sizeCheck import SizeCheck
 
 if __name__ == "__main__":
 
@@ -59,13 +59,13 @@ if __name__ == "__main__":
     '''
     Prints the object size with Flyweight pattern
     '''
-    print("Object size using Flyweight: ", sizeCheck.getSize(charFactoryObject,charFlyweightObject,fontFactory,runArray))
+    print("Object size using Flyweight: ", SizeCheck.getSize(charFactoryObject,charFlyweightObject,fontFactory,runArray))
 
 
     '''
     Prints the object size without flyweight pattern
     '''
-    print("Object size without using Flyweight: ",sizeCheck.Checksize('A'))
+    print("Object size without using Flyweight: ",SizeCheck.checkSize('A'))
 
     
 
